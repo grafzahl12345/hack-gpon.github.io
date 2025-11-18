@@ -37,12 +37,18 @@ parent: Zyxel
 
 Once you access the stick via ssh you will be presented with a second tier login. The credentials to access the zyxel shell are: username: `twmanu` with password: `twmanu` or username: `admin` with password: `1234`.
 From the Zyxel shell you can move to a standard Linux shell using the `linuxshell` command
+## IP Range
+
+In new Zyxel PMG300-D20B[08/2025], firmware V1.00(ABVJ.1)b1e the device IP changed from 10.10.1.1 to 192.168.1.1 
 
 ## Serial
 
 The stick has a TTL 3.3v UART console (configured as 115200 8-N-1) that can be accessed from the top surface. It's near the SFP header. TX, RX and ground pads need to be connected to a USB2TTL adapter supporting 3V3 logic. Ground and power can be connected via the regular SFP pins.
 
 {% include image.html file="tw236h-cdel-serial.jpg" alt="PMG3000-D20B Serial Pinout" caption="PMG3000-D20B Serial Pinout" %}
+
+<img width="3139" height="807" alt="PMG3000-D20B Serial Pinout backside" src="https://github.com/user-attachments/assets/4ca8f31b-48d5-4c04-884a-afacda63d296" />
+
 
 {% include alert.html content="Some USB TTL adapters label TX and RX pins the other way around: try to swap them if the connection doesn't work." alert="Note"  icon="svg-warning" color="yellow" %}
 
@@ -60,7 +66,7 @@ The stick has a TTL 3.3v UART console (configured as 115200 8-N-1) that can be a
 - V1.00(ABVJ.1)b1e (ca. 2024)
 - V2.50(ABVJ.0)b1b (2022)
 - V2.50(ABVJ.1)b1d (2023)
-
+  
 ## List of partitions
  
 | dev  | size     | erasesize | name           |
